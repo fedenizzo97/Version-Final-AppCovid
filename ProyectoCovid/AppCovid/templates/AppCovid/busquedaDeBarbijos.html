@@ -1,0 +1,23 @@
+{% extends "AppCovid/padre.html" %}
+
+{% load static %} 
+
+{% block contenido2 %} 
+
+
+<h1 class="mb-1" style=color:white>Formulario para buscar Barbijos</h1>
+
+{% endblock %}
+
+{% block contenido %} 
+    <h1>Que barbijo queres buscar?</h1>
+
+    <form action="/AppCovid/buscar/", method="GET">
+        <input type= "text" name="marca">
+
+        <input type= "submit" value="Buscar por Marca">
+
+
+    </form>
+
+{% endblock %}

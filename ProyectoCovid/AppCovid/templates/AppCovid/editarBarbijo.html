@@ -1,0 +1,35 @@
+{% extends "AppCovid/padre.html" %}
+
+{% load static %} 
+
+        {% block contenido2 %} 
+
+
+            <h1 class="mb-1" style=color:white>Formularios para editar Barbijos: </h1>
+
+        {% endblock %}
+
+        {% block contenido %} 
+
+            {% if miFormulario.error %} 
+            <p> ERROR: Intenta Nuevamente </p>
+            {% endif %}
+
+            <form action="/AppCovid/barbijosFormulario/" method= "POST"> {% csrf_token %}
+
+            <table>
+            {{ miFormulario.as_table }}
+
+            <table>
+
+        
+
+            <input type= "submit" value= "Cargar Datos" >
+
+
+
+
+
+            </form>
+
+{% endblock %}

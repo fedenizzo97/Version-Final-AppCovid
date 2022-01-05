@@ -1,0 +1,37 @@
+{% extends "AppCovid/padre.html" %}
+
+
+{% load static %}
+
+        {% block contenido2 %}
+            <h1 class="mb-1" style=color:white >Aca veo los barbijos registrados en mi base de datos: </h1>
+        {% endblock %}
+
+
+        {% block contenido %}
+
+
+            
+            {% for b in barbijo %}
+
+
+                <li>Barbijos:  {{ b }}  </li>
+                <button>
+
+                    <a href="{% url 'EliminarBarbijo' b.marca %}"> Eliminar </a>
+                    
+                    <a href="{% url 'EditarBarbijo' b.marca %}"> Editar </a>
+
+
+                </button>
+                <br>
+
+
+            {% endfor %}
+
+            <a href="barbijosFormulario"> Agregar otra marca de Barbijos </a> 
+
+
+         
+
+        {% endblock %}

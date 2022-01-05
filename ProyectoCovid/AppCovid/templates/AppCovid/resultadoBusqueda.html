@@ -1,0 +1,34 @@
+{% extends "AppCovid/padre.html" %}
+
+
+{% load static %}
+
+        {% block contenido2 %}
+            <h1 class="mb-1">Busqueda de Barbijos (Filtro)</h1>
+        {% endblock %}
+
+
+        {% block contenido %}
+
+
+            <h1>Estamos buscando este barbijo: </h1>
+
+            {% if barbijo %}
+
+                <ul>
+                {% for barbijos in barbijo %}
+
+                <li>MARCA: {{barbijos.marca}}</li>
+                <li>TAMAÑO:{{barbijos.tamanio}}</li>
+                <li>PRECIO:{{barbijos.precio}}</li>
+
+
+                {% endfor %}
+                </ul>
+
+            {% endif %}
+         
+
+         
+
+        {% endblock %}
