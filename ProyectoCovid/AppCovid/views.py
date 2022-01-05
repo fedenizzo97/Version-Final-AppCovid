@@ -118,36 +118,36 @@ def editarBarbijo(request, marca_para_editar):
     return render(request, "AppCovid/editarBarbijo.html", {"miFormulario": miFormulario, "barbijAEditar": barbijAEditar})
 
 
-class BarbijosList(ListView):
+#class BarbijosList(ListView):
     
-    model = Barbijos
-    template_name = "AppCovid/babrijos_list.html"
+   #model = Barbijos
+    #template_name = "AppCovid/babrijos_list.html"
     
 #Detalle - SUPER Leer - Buscar!!!!!
-class BarbijosDetalle(DetailView):
+#class BarbijosDetalle(DetailView):
     
-    model = Barbijos
-    template_name = "AppCovid/babrijos_detalle.html"
+    #model = Barbijos
+    #template_name = "AppCovid/babrijos_detalle.html"
     
 #Crear elementos
-class BarbijosCreacion(CreateView):
+#class BarbijosCreacion(CreateView):
     
     model = Barbijos
     success_url = "../babrijos/list"  #AppCovid/template/AppCoder/editar
     fields = ["marca", "origen", "precio"]
     
 #modificar!!!!!!!!!!!  
-class BarbijosUpdate(UpdateView):
+#class BarbijosUpdate(UpdateView):
     
-    model = Barbijos
-    success_url = "../babrijos/list"
-    fields = ["marca", "origen", "precio"]
+    #model = Barbijos
+    #success_url = "../babrijos/list"
+    #fields = ["marca", "origen", "precio"]
   
 #Borrar   
-class BarbijosDelete(DeleteView):
+#class BarbijosDelete(DeleteView):
     
-    model = Barbijos
-    success_url = "../babrijos/list"
+    #model = Barbijos
+    #success_url = "../babrijos/list"
 
 def login_request(request):
     

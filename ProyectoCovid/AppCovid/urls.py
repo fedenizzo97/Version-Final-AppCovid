@@ -31,14 +31,14 @@ urlpatterns = [
     path("editarBarbijo/<marca_para_editar>", views.editarBarbijo, name= "EditarBarbijo"),
 
     path("leerBarbijos",views.leerBarbijos, name= "LeerBarbijos"),
-    path('barbijos/list', views.BarbijosList.as_view, name='List'),
+    #path('barbijos/list', views.BarbijosList.as_view, name='List'),
     
-    path(r'^(?P<pk>\d+)$', views.BarbijosDetalle.as_view(), name='Detail'),
+    #path(r'^(?P<pk>\d+)$', views.BarbijosDetalle.as_view(), name='Detail'),
     
     path('logout', LogoutView.as_view(template_name='AppCovid/logout.html'), name="Logout"),
     
-    path(r'^nuevo$', views.BarbijosCreacion.as_view(), name='New'),
-    path(r'^editar/(?P<pk>\d+)$', views.BarbijosUpdate.as_view(), name='Edit'),
+    #path(r'^nuevo$', views.BarbijosCreacion.as_view(), name='New'),
+    #path(r'^editar/(?P<pk>\d+)$', views.BarbijosUpdate.as_view(), name='Edit'),
     #path(r'^borrar/(?P<pk>\d+)$', views.OximetrosDelete.as_view(), name='Delete'),
     path("login", views.login_request, name="Login"),
     path("register", views.register, name="Register"),
